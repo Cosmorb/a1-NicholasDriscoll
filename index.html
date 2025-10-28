@@ -1,130 +1,156 @@
-<!doctype html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
-  <head>
-    <title>CS4241 Assignment 1</title>
-    <meta charset="utf-8">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BidMaster - Charity Auction Manager</title>
   <style>
-      .colorbg1{
-          background-color: #63C3DA;
-      }
-      .colorbg3{
-          background-color: #027373;
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      margin: 20px;
+      color: #222;
+    }
 
-      }
-      .colorbg2{
-          background-color: #04BFAD;
-      }
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-      body {
-          font-family: 'Oswald', sans-serif;
-          text-align: center;
-          background-color: #172026;
-          color: #F3E6C2
-      ;
-      }
+    .controls {
+      text-align: center;
+      margin-bottom: 15px;
+    }
 
-      h1{
+    .controls button {
+      margin: 5px;
+      padding: 8px 14px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
 
-        text-align: center;
-      }
+    .controls button:hover {
+      background-color: #0056b3;
+    }
 
-      p{
-        text-align: center;
-      }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
 
-      h2{
-          text-align: center;
-      }
-        a{
-            text-decoration: none;
-            text-align: center;
-        }
+    .section {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    }
 
+    h2 {
+      margin-top: 0;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+    }
 
-        body.light {
-            background-color: #ADA493;
-            color: #E0CCA8;
-        }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
 
-      /* I used ChatGPT to help write body.light #LightDarkModeChanger, which matches the button to the current color scheme, howver the button and theme chainginh mechanicn was done by me i just needed example to see figure out ow to match them, as i just couldnt alwas get it to match 100% */
-        body.light #LightDarkModeChanger{
-            background-color: #47371C;
-            color: #E0CCA8;
-            position: fixed;
-            top: 15px;
-            right: 15px;
-        }
+    th, td {
+      border: 1px solid #aaa;
+      padding: 8px;
+      text-align: left;
+    }
 
+    th {
+      background-color: #e2e3e5;
+    }
 
-      body.light .colorbg1{background:#33250D }
-      body.light .colorbg3{background:#47371C }
-      body.light .colorbg2{background:#7A6B50 }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 0;
+    }
 
-        #LightDarkModeChanger {
-          background-color: #172026;
-            color: #F3E6C2;
-          position: fixed;
-          top: 15px;
-          right: 15px;
-               }
+    li {
+      border-bottom: 1px solid #ddd;
+      padding: 4px 0;
+    }
 
+    .total {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #155724;
+      background-color: #d4edda;
+      padding: 10px;
+      border-radius: 6px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #555;
+    }
   </style>
-  </head>
+</head>
 
-  <body>
-  <button id ="LightDarkModeChanger">Light/Dark Mode</button>
+<body>
+  <h1> Charity Auction Manager</h1>
 
-  <h1 class="colorbg1">About me: Nicholas Driscoll</h1>
-    <p class="colorbg1">
-      Hello, my name is Nicholas Driscoll. I am a senior Robotics Engineering (RBE) major at WPI, also participating in ROTC and soon commissioning into the National Guard. I am on track to complete my undergraduate degree by the end of the C-term and plan to finish my master’s by next fall.
-I began my studies at Wentworth Institute of Technology before transferring to WPI during my sophomore year. My academic and career interests lie in automation within advanced manufacturing. Over the past summer, I completed an internship focused on automation in metal fabrication processes. Before college, I attended a vocational high school where I trained extensively on manual and CNC lathes and mills, while also gaining experience with CAD and CAM programming. I also gained hands-on experience with metal fabrication and general tool use through various projects.
-I enjoy team-based work environments where responsibilities are delegated to best fit individual strengths, a practice I’ve found effective both in industry and in the classroom. At the same time, I enjoy pursuing smaller personal projects, often combining 3D printing and ECE kits to design and build robotic systems.
-Outside of academics, I am highly involved in ROTC and enjoy lifting, reading, and playing RPG video games.
-    </p>
+  <div class="controls">
+    <button>Add Item</button>
+    <button>Start Auction</button>
+    <button>Record Bid</button>
+    <button>Sell Item</button>
+    <button>Close Auction</button>
+  </div>
 
-        <h2 class="colorbg1"> A little about me:  </h2>
-    <p class="colorbg1">
-      Robotics Engineering (RBE) is my major. 
-      <br> part of Reserve Officers' Training Corps (ROTC), The Baystate Battalion.
-      <br> minor is Philosophy.
-    </p>
+  <div class="grid">
+    <div class="section">
+      <h2>Items to be Auctioned</h2>
+      <table>
+        <tr><th>Name</th><th>Description</th><th>Initial Price</th></tr>
+        <tr><td>Guitar</td><td>Signed by Band</td><td>$100</td></tr>
+        <tr><td>Book</td><td>First Edition</td><td>$50</td></tr>
+      </table>
+    </div>
 
-    <h2 class="colorbg3">Schooling</h2>
-    <p class="colorbg3">
-      <br>Wentworth Institute of Technology (2020-2021)</br>
-      <br>Worcester Polytechnic Institute (2021-Present)</br>
-      <br>Essex North Shore Agricultural & Technical School (advanced manufacturing) (2016-2020) </br>
-    </p>
+    <div class="section">
+      <h2>Items Sold</h2>
+      <table>
+        <tr><th>Name</th><th>Winner</th><th>Final Price</th></tr>
+        <tr><td>Painting</td><td>Alice</td><td>$250</td></tr>
+        <tr><td>Vase</td><td>Bob</td><td>$120</td></tr>
+      </table>
+    </div>
+  </div>
 
-    <h2 class="colorbg2">Experience</h2>
+  <div class="section">
+    <h2>Current Item Being Auctioned</h2>
+    <p><strong>Item:</strong> Vintage Watch – Antique gold timepiece</p>
+    <p><strong>Initial Price:</strong> $300</p>
 
-    <p class="colorbg2">
-      <br>Internship at the Rayteon manufacturing Plant in Andover</br>
-      <br>Worked as a Electrician apprentice</br>
-      <br>Internship at a Beacon Interactive</br>
-    </p>
+    <h3>Current Bids</h3>
+    <ul>
+      <li>Charlie – $500</li>
+      <li>Alice – $450</li>
+      <li>Bob – $400</li>
+    </ul>
+  </div>
 
-    <h2 class="colorbg2">Resume</h2>
-    <br><a href="Resume.pdf">Link to my Resume</a></br>
+  <div class="total">
+    Total Funds Raised: $1,200
+  </div>
 
-    <img src="BSB.png" alt = "Bay State Battilion Image"
-     width="250" height="300">
-    <img src="US-ARMY-ROTC.svg.png" alt = "Us army rotc pacth"
-    width="250" height="300">
-    <img src="wpi-logo.webp" alt = "logo of wpi"
-     width="500" height="300">
-
-
-    <script>
-            document.getElementById("LightDarkModeChanger").addEventListener("click", () => {
-            document.body.classList.toggle("light");}
-            )
-    </script>
-
-  </body>
+  <div class="footer">
+    CS 3733 - Individual Project (IP.1) | Author: Nicholas Driscoll | October 2025
+  </div>
+</body>
 </html>
