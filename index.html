@@ -7,14 +7,15 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f8f9fa;
+      background-color: #1a1a1a;
       margin: 20px;
-      color: #222;
+      color: #e0e0e0;
     }
 
     h1 {
       text-align: center;
       margin-bottom: 10px;
+      color: #ffffff;
     }
 
     .controls {
@@ -25,7 +26,7 @@
     .controls button {
       margin: 5px;
       padding: 8px 14px;
-      background-color: #007bff;
+      background-color: #0d6efd;
       color: white;
       border: none;
       border-radius: 4px;
@@ -33,7 +34,7 @@
     }
 
     .controls button:hover {
-      background-color: #0056b3;
+      background-color: #0b5ed7;
     }
 
     .grid {
@@ -44,16 +45,18 @@
     }
 
     .section {
-      background: white;
+      background: #2d2d2d;
       padding: 15px;
       border-radius: 8px;
-      box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 6px rgba(255, 255, 255, 0.1);
+      border: 1px solid #404040;
     }
 
     h2 {
       margin-top: 0;
-      border-bottom: 2px solid #ccc;
+      border-bottom: 2px solid #555;
       padding-bottom: 5px;
+      color: #ffffff;
     }
 
     table {
@@ -62,13 +65,15 @@
     }
 
     th, td {
-      border: 1px solid #aaa;
+      border: 1px solid #555;
       padding: 8px;
       text-align: left;
+      color: #e0e0e0;
     }
 
     th {
-      background-color: #e2e3e5;
+      background-color: #404040;
+      color: #ffffff;
     }
 
     ul {
@@ -78,16 +83,17 @@
     }
 
     li {
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid #555;
       padding: 4px 0;
+      color: #e0e0e0;
     }
 
     .total {
       text-align: center;
       font-weight: bold;
       font-size: 1.2em;
-      color: #e2e7e3c2;
-      background-color: #155724;
+      color: #ffffff;
+      background-color: #198754;
       padding: 10px;
       border-radius: 6px;
     }
@@ -96,7 +102,7 @@
       text-align: center;
       margin-top: 30px;
       font-size: 0.9em;
-      color: #555;
+      color: #aaa;
     }
   </style>
 </head>
@@ -110,6 +116,19 @@
     <button>Record Bid</button>
     <button>Sell Item</button>
     <button>Close Auction</button>
+  </div>
+
+  <div class="section">
+    <h2>Current Item Being Auctioned</h2>
+    <p><strong>Item:</strong> Vintage Watch – 18th Century gold timepiece</p>
+    <p><strong>Initial Price:</strong> $300</p>
+
+    <h3>Current Bids</h3>
+    <ul>
+      <li>Bruce – $500</li>
+      <li>Diane – $450</li>
+      <li>Clark – $400</li>
+    </ul>
   </div>
 
   <div class="grid">
@@ -130,19 +149,6 @@
         <tr><td>Civil War Map of North America</td><td>Barry</td><td>$120</td></tr>
       </table>
     </div>
-  </div>
-
-  <div class="section">
-    <h2>Current Item Being Auctioned</h2>
-    <p><strong>Item:</strong> Vintage Watch – 18th Century gold timepiece</p>
-    <p><strong>Initial Price:</strong> $300</p>
-
-    <h3>Current Bids</h3>
-    <ul>
-      <li>Bruce – $500</li>
-      <li>Diane – $450</li>
-      <li>Clark – $400</li>
-    </ul>
   </div>
 
   <div class="total">
