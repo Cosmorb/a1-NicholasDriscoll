@@ -89,13 +89,14 @@
     }
 
     .total {
-      text-align: center;
+      text-align: left;
       font-weight: bold;
       font-size: 1.2em;
       color: #ffffff;
       background-color: #198754;
       padding: 10px;
       border-radius: 6px;
+      margin-bottom: 15px;
     }
 
     .footer {
@@ -110,49 +111,52 @@
 <body>
   <h1>  Charity Auction Manager</h1>
 
+  <div class="total">
+    Total Funds Raised: $ 3000
+  </div>
+
   <div class="controls">
-    <button>Add Item</button>
+    <button>Add Merchandise</button>
     <button>Start Auction</button>
     <button>Record Bid</button>
-    <button>Sell Item</button>
+    <button>Sell Merchandise</button>
     <button>Close Auction</button>
   </div>
 
   <div class="section">
-    <h2>Current Item Being Auctioned</h2>
-    <p><strong>Item:</strong> Vintage Watch – 18th Century gold timepiece</p>
+    <h2>Current Merchandise Being Auctioned</h2>
+    <p><strong>Merchandise:</strong> Krptonite</p>
     <p><strong>Initial Price:</strong> $300</p>
 
     <h3>Current Bids</h3>
     <ul>
-      <li>Bruce – $500</li>
-      <li>Diane – $450</li>
-      <li>Clark – $400</li>
+      <li>Bruce – $10000000000000</li>
+      <li>Ollie – $1000000000</li>
+      <li>Arthur – $1000000</li>
+      <li>Diane – $100000</li>
+      <li>Clark – $5</li>
+      
     </ul>
   </div>
 
   <div class="grid">
     <div class="section">
-      <h2>Items to be Auctioned:</h2>
+      <h2>Merchandises to be Auctioned:</h2>
       <table>
         <tr><th>Name</th><th>Description</th><th>Start Price</th></tr>
-        <tr><td>Guitar</td><td>John Bovi </td><td>$100</td></tr>
-        <tr><td>1st Editionm Book</td><td> Harry Potter </td><td>$50</td></tr>
+        <tr><td>Hair Piece</td><td>John Bovi </td><td>$100</td></tr>
+        <tr><td>Wand</td><td> Harry Potter </td><td>$50</td></tr>
       </table>
     </div>
 
     <div class="section">
-      <h2>Items Sold:</h2>
+      <h2>Merchandises Sold:</h2>
       <table>
         <tr><th>Name</th><th>Winner</th><th>Final Price</th></tr>
         <tr><td> 16th Century Painting</td><td>Kat</td><td>$250</td></tr>
         <tr><td>Civil War Map of North America</td><td>Barry</td><td>$120</td></tr>
       </table>
     </div>
-  </div>
-
-  <div class="total">
-    Total Funds Raised: $ 3000
   </div>
 
   <div class="footer">
