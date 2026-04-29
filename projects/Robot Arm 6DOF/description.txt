@@ -1,0 +1,1 @@
+An extended 6 degrees-of-freedom robotic arm building on the 4DOF design. The additional joints significantly increase workspace and dexterity, enabling more complex manipulation tasks. Features redesigned joint geometry for improved range of motion and structural rigidity.
