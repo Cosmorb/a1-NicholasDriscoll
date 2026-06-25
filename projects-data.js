@@ -5,6 +5,26 @@
 
 var PROJECTS = [
   {
+    "title": "3D Printed Drone",
+    "description": "**Custom 3D-Printed Drone** An ongoing personal project focused on designing and 3D printing a fully custom drone from scratch. The frame, body shell, arms, and motor mounts are all original CAD designs made with printability, strength, and weight reduction in mind. The drone is being printed with carbon fiber reinforced PETG because of its stiffness, durability, and vibration resistance, which are important for a stable flight platform. The project is currently in the design and prototyping phase, with work focused on refining the frame geometry, improving motor mount strength, and preparing the design for flight testing.",
+    "images": [
+      "projects/3D Printed Drone/cad-exploded.png"
+    ],
+    "link": null
+  },
+  {
+    "title": "Autonomous Desktop CNC Machine",
+    "description": "**Autonomous Desktop CNC Machine — WPI Major Qualifying Project** For my WPI Major Qualifying Project, I worked with a team of six engineers to continue the development of a low-cost, open-source autonomous desktop CNC machine for student manufacturing education. The machine was designed to mill wood, plastics, and non-ferrous metals across four axes. Our team improved several major systems on the machine, including the automatic tool changer, dust collection system, coolant system, rotary 4th axis, and CAM workflow. The project included a reverse-engineered three-slot automatic tool changer with a touch-off sensor for measuring tool offsets, a redesigned dust boot with a magnetic brush attachment, and a new dust skirt with print-in-place bristles for better chip evacuation. We also overhauled the coolant system by adding a chip auger, sump, bag filter, drain pan, and improved flow capacity. The 4th-axis rotary unit was installed and configured, allowing the machine to run multi-axis toolpaths. On the software and CAM side, the team developed collision simulations, fixture models, and a feeds-and-speeds library to make the machine easier and safer to use. My main Fusion 360 contributions were the custom coolant drain bed and the ECU enclosure. The drain bed was designed as a sloped center-draining tray to guide chips and coolant into the sump. I also modeled the full ECU enclosure, including the controller board, power supply, terminal blocks, and internal wiring layout, so the electronics could be mounted cleanly and safely inside the machine.",
+    "images": [
+      "projects/Autonomous Desktop CNC Machine/01-poster.png",
+      "projects/Autonomous Desktop CNC Machine/02-machine-photo.png",
+      "projects/Autonomous Desktop CNC Machine/03-cad-tool-changer.png",
+      "projects/Autonomous Desktop CNC Machine/04-cad-coolant-drain-tray.png",
+      "projects/Autonomous Desktop CNC Machine/05-cad-ecu-enclosure.png"
+    ],
+    "link": null
+  },
+  {
     "title": "Checkers Online",
     "description": "Checkers Online Checkers Online is a browser-based checkers game I built independently for a web development course. The game supports both local two-player play and online multiplayer through account login. I implemented the full checkers rule set, including legal moves, captures, kinging, turn handling, and game resets. The site also includes a light/dark theme toggle, sound effects, and visual feedback for moves and captures. For online play, I connected the frontend to a backend server that handles user authentication and multiplayer matchmaking. I built the project end-to-end, including the game logic, UI design, audio, visual effects, and server integration.",
     "images": [
@@ -38,14 +58,8 @@ var PROJECTS = [
     "link": null
   },
   {
-    "title": "xArm Checkers Integration",
-    "description": "xArm Checkers Integration Built a system that lets a physical xArm robotic arm play checkers on a real board, driven by a web-based game. This project combines two earlier independent projects — the web-based Checkers Online game (built for a CS course) and the xArm vision-guided pick-and-place system (built across RBE 3001 robotics labs) — into a single end-to-end pipeline. When a player makes a move in the web game, it writes the move to a queue file (queue.jsonl). A MATLAB bridge script (run_board_bridge.m) watches that file and wakes up the moment a new move arrives. Using a calibration step with an overhead camera, the system knows the exact real-world millimeter coordinates of every board square (A1–H8) relative to the robot. The arm then executes the move: it hovers over the source square, descends, grabs the piece with the gripper, lifts back up, travels to the destination square, and places the piece down. The motion relies on inverse kinematics and joint-angle planning developed in the earlier robotics labs. After each move, the camera takes a snapshot of the physical board and sends it back to the web server so the digital game state stays in sync with the real board.",
-    "images": [],
-    "link": null
-  },
-  {
     "title": "xArm Color Ball Sorter",
-    "description": "Vision-Guided Robotic Sorting System (RBE 3001) Built a vision-guided robotic sorting system over five robotics labs using an xArm robotic arm and an overhead camera. The system detects colored balls on a custom checkerboard workspace, identifies their color and position, then commands the robot to pick them up and place them into the correct color-coded bins. I designed the checkerboard, tile grid, ball holders, and camera mount in Fusion 360, then 3D printed the parts. The checkerboard also served as a calibration tool, allowing the camera to convert pixel locations into real-world coordinates that the robot could reach. The project progressed from basic arm control to forward kinematics, inverse kinematics, trajectory planning, singularity avoidance, and finally full camera-based pick-and-place automation. By the final stage, the system could sort red, orange, yellow, and green balls without manual input. After completing these labs I extended this work into a new project by combining it with the web-based Checkers Online game I built for a CS course. The robot arm's pick-and-place pipeline, camera calibration system, and IK solver from this project became the foundation of the xArm Checkers Integration, where the arm now physically plays checkers on a real board driven by moves from a live browser game.",
+    "description": "Vision-Guided Robotic Sorting System Built a vision-guided robotic sorting system over five robotics labs using an xArm robotic arm and an overhead camera. The system detects colored balls on a custom checkerboard workspace, identifies their color and position, then commands the robot to pick them up and place them into the correct color-coded bins. I designed the checkerboard, tile grid, ball holders, and camera mount in Fusion 360, then 3D printed the parts. The checkerboard also served as a calibration tool, allowing the camera to convert pixel locations into real-world coordinates that the robot could reach. The project progressed from basic arm control to forward kinematics, inverse kinematics, trajectory planning, singularity avoidance, and finally full camera-based pick-and-place automation. By the final stage, the system could sort red, orange, yellow, and green balls without manual input.",
     "images": [
       "projects/xArm Color Ball Sorter/cad-assembled.png",
       "projects/xArm Color Ball Sorter/cad-exploded.png",
@@ -57,7 +71,13 @@ var PROJECTS = [
   }
 ];
 
-var BG_IMAGES = [
+const BG_IMAGES = [
+  "projects/3D Printed Drone/cad-exploded.png",
+  "projects/Autonomous Desktop CNC Machine/01-poster.png",
+  "projects/Autonomous Desktop CNC Machine/02-machine-photo.png",
+  "projects/Autonomous Desktop CNC Machine/03-cad-tool-changer.png",
+  "projects/Autonomous Desktop CNC Machine/04-cad-coolant-drain-tray.png",
+  "projects/Autonomous Desktop CNC Machine/05-cad-ecu-enclosure.png",
   "projects/Checkers Online/gameplay.png",
   "projects/Checkers Online/login-screen.png",
   "projects/ROS2 SLAM Autonomous Explorer/01-robot-hardware.png",
