@@ -19,7 +19,10 @@ const PROJECTS = [
   {
     "title": "Checkers Online",
     "description": "Checkers Online Checkers Online is a browser-based checkers game I built independently for a web development course. The game supports both local two-player play and online multiplayer through account login. I implemented the full checkers rule set, including legal moves, captures, kinging, turn handling, and game resets. The site also includes a light/dark theme toggle, sound effects, and visual feedback for moves and captures. For online play, I connected the frontend to a backend server that handles user authentication and multiplayer matchmaking. I built the project end-to-end, including the game logic, UI design, audio, visual effects, and server integration.",
-    "images": [],
+    "images": [
+      "projects/Checkers Online/gameplay.png",
+      "projects/Checkers Online/login-screen.png"
+    ],
     "link": "https://a4-nicholasdriscoll.onrender.com/"
   },
   {
@@ -37,9 +40,23 @@ const PROJECTS = [
   {
     "title": "xArm Color Ball Sorter",
     "description": "Vision-Guided Robotic Sorting System Built a vision-guided robotic sorting system over five robotics labs using an xArm robotic arm and an overhead camera. The system detects colored balls on a custom checkerboard workspace, identifies their color and position, then commands the robot to pick them up and place them into the correct color-coded bins. I designed the checkerboard, tile grid, ball holders, and camera mount in Fusion 360, then 3D printed the parts. The checkerboard also served as a calibration tool, allowing the camera to convert pixel locations into real-world coordinates that the robot could reach. The project progressed from basic arm control to forward kinematics, inverse kinematics, trajectory planning, singularity avoidance, and finally full camera-based pick-and-place automation. By the final stage, the system could sort red, orange, yellow, and green balls without manual input.",
-    "images": [],
+    "images": [
+      "projects/xArm Color Ball Sorter/cad-assembled.png",
+      "projects/xArm Color Ball Sorter/cad-exploded.png",
+      "projects/xArm Color Ball Sorter/robot-gripper.png",
+      "projects/xArm Color Ball Sorter/robot-overview.png",
+      "projects/xArm Color Ball Sorter/robot-picking.png"
+    ],
     "link": null
   }
 ];
 
-const BG_IMAGES = [];
+const BG_IMAGES = [
+  "projects/Checkers Online/gameplay.png",
+  "projects/Checkers Online/login-screen.png",
+  "projects/xArm Color Ball Sorter/cad-assembled.png",
+  "projects/xArm Color Ball Sorter/cad-exploded.png",
+  "projects/xArm Color Ball Sorter/robot-gripper.png",
+  "projects/xArm Color Ball Sorter/robot-overview.png",
+  "projects/xArm Color Ball Sorter/robot-picking.png"
+];
