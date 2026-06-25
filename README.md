@@ -36,6 +36,57 @@ Another thing to note is that I also used AI for my written documents, including
 Outside of these two intentional uses of AI, the only other computer help I received was from autocomplete suggestions in WebStorm or VS when completing a line of code. I generally went along with those suggestions if they looked correct and then modified them afterward. In almost all cases, I was already planning to write what the editor suggested; it just sped up the process a little bit. However, I did not use JetBrains’ actual AI assistant, where you ask a question and it gives code and suggestions, as it required linking a card to my account.
 Videos I used:
 
-HTML Tutorial - YouTube 
-CSS - Introduction - W3Schools.com	
-https://youtube.com/shorts/HabPiILc5QY     (video if render is not working)
+You must use a consistent naming scheme for all projects in this course.
+If we can't find it, we can't grade it.
+
+The name scheme should be `a1-yourFirstAndLastName`.
+The `a1` will need to be updated to `a2`, `a3`, and so on in future assignments.
+
+Rubric
+---
+For the Technical and Design achievements, make sure you thoroughly describe in your README what you did why it was challenging. ALL ACHIEVEMENTS MUST BE DESCRIBED IN YOUR README IN ORDER TO GET CREDIT FOR THEM. Remember that the success of Achievements hinges on how well you describe them in your README. Well formatted text, images, and concise and clear descriptions are helpful. You must include a Technical Achievements and Design Achievements section, even if none are attempted.
+
+Note that if you want to load resources besides your index.html file (images, an CSS file, a JS file) you'll need to modify server.js to point to these. For now it's easiest to just hardcode paths to the resources, but we'll look at ways to optimize this shortly.
+
+*Basic Requirements*
+
+(10 points each)
+
+1. Assignment has proper naming scheme
+2. Files forked from original repo
+3. `index.html` properly rendered
+4. `index.html` page properly edited
+5. All changes pushed to GitHub
+6. Project deployed to Render (or other hosting option)
+7. Pull Request submitted to original repo
+
+*Technical Achievements*
+1. (5 points) Style your page using CSS. Each style rule you apply will get you 1 point for a maximum of 5 points. Be sure to describe your style rules in your README.
+2. (5 points) Add a simple JavaScript animation to the page.
+3. (5 points) Experiment with other *semantic* HTML tags (links, images, tables, header, footer, etc.). Each extra tag you use will get you 1 point for a maximum of 5 points. Be sure to describe the tags you use in your README.
+
+*Design Achievements*
+1. (10 points) Create a color palette using [color.adobe.com](https://color.adobe.com). Use all the colors in the palette in your webpage by implementing the appropriate CSS. Add a small screenshot of the color wheel for your color palette to your repo.
+2. (5 points) Use a font from [Google Fonts](https://fonts.google.com) in your website.
+
+**NOTE:** There are additional color pallette and font options listed on Canvas under Modules -> Resources -> Color Pallettes and Fonts. You are welcome to use one of those instead. If you know of and would like to use any other resources that are not included, feel free to contact the instructor.
+
+Resources
+---
+
+If you need refreshers for JavaScript/HTML/CSS or Git/GitHub, check out the resources posted on Canvas under Modules -> Resources.
+
+
+Sample Readme (delete the above when you're ready to submit, and modify the text below with your links and descriptions)
+---
+
+Joshua Cuneo
+http://a1-joshuacuneo.onrender.com
+
+This project shows ...
+
+## Technical Achievements
+- **Styled page with CSS**: Added rules for the p, li, and a selectors...
+
+## Design Achievements
+- **Used the Roboto Font from Google Fonts**: I used Roboto as the font for the primary copy text in my site.
