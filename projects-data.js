@@ -34,7 +34,14 @@ const PROJECTS = [
   {
     "title": "TinyPets",
     "description": "TinyPets TinyPets is a retro pixel-art web game created as a group project. Players can make an account, earn credits, buy randomized eggs from the in-game shop, hatch them through a click-based hatching sequence, and collect the pets they receive. Each pet is saved to the player’s collection with its own unique ID and sell value, giving players the option to sell pets for credits and continue buying and hatching more eggs. My main contribution was the backend of the website. I worked on the server-side logic, database interactions, and API routes that supported the shop, egg purchasing, hatching system, and pet collection features.",
-    "images": [],
+    "images": [
+      "projects/TinyPets/hatched.png",
+      "projects/TinyPets/hatching.png",
+      "projects/TinyPets/login.png",
+      "projects/TinyPets/main-menu.png",
+      "projects/TinyPets/my-pets.png",
+      "projects/TinyPets/store.png"
+    ],
     "link": null
   },
   {
@@ -54,6 +61,12 @@ const PROJECTS = [
 const BG_IMAGES = [
   "projects/Checkers Online/gameplay.png",
   "projects/Checkers Online/login-screen.png",
+  "projects/TinyPets/hatched.png",
+  "projects/TinyPets/hatching.png",
+  "projects/TinyPets/login.png",
+  "projects/TinyPets/main-menu.png",
+  "projects/TinyPets/my-pets.png",
+  "projects/TinyPets/store.png",
   "projects/xArm Color Ball Sorter/cad-assembled.png",
   "projects/xArm Color Ball Sorter/cad-exploded.png",
   "projects/xArm Color Ball Sorter/robot-gripper.png",
