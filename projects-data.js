@@ -3,7 +3,7 @@
 //   node generate.js
 // (Render runs this automatically on every deploy as the Build Command.)
 
-const PROJECTS = [
+var PROJECTS = [
   {
     "title": "Checkers Online",
     "description": "Checkers Online Checkers Online is a browser-based checkers game I built independently for a web development course. The game supports both local two-player play and online multiplayer through account login. I implemented the full checkers rule set, including legal moves, captures, kinging, turn handling, and game resets. The site also includes a light/dark theme toggle, sound effects, and visual feedback for moves and captures. For online play, I connected the frontend to a backend server that handles user authentication and multiplayer matchmaking. I built the project end-to-end, including the game logic, UI design, audio, visual effects, and server integration.",
@@ -57,7 +57,7 @@ const PROJECTS = [
   }
 ];
 
-const BG_IMAGES = [
+var BG_IMAGES = [
   "projects/Checkers Online/gameplay.png",
   "projects/Checkers Online/login-screen.png",
   "projects/ROS2 SLAM Autonomous Explorer/01-robot-hardware.png",
