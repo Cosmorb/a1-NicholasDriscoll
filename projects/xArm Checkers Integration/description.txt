@@ -1,0 +1,7 @@
+xArm Checkers Integration
+
+Built a system that lets a physical xArm robotic arm play checkers on a real board, driven by a web-based game. This project combines two earlier independent projects — the web-based Checkers Online game (built for a CS course) and the xArm vision-guided pick-and-place system (built across RBE 3001 robotics labs) — into a single end-to-end pipeline.
+
+When a player makes a move in the web game, it writes the move to a queue file (queue.jsonl). A MATLAB bridge script (run_board_bridge.m) watches that file and wakes up the moment a new move arrives. Using a calibration step with an overhead camera, the system knows the exact real-world millimeter coordinates of every board square (A1–H8) relative to the robot.
+
+The arm then executes the move: it hovers over the source square, descends, grabs the piece with the gripper, lifts back up, travels to the destination square, and places the piece down. The motion relies on inverse kinematics and joint-angle planning developed in the earlier robotics labs. After each move, the camera takes a snapshot of the physical board and sends it back to the web server so the digital game state stays in sync with the real board.
