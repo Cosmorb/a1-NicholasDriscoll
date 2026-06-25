@@ -5,6 +5,14 @@
 
 var PROJECTS = [
   {
+    "title": "3D Printed Drone",
+    "description": "An ongoing personal project focused on designing and 3D printing a fully custom drone from scratch. The frame, body shell, arms, and motor mounts are all original CAD designs made with printability, strength, and weight reduction in mind. The drone is being printed with carbon fiber reinforced PETG because of its stiffness, durability, and vibration resistance, which are important for a stable flight platform. The project is currently in the design and prototyping phase, with work focused on refining the frame geometry, improving motor mount strength, and preparing the design for flight testing.",
+    "images": [
+      "projects/3D Printed Drone/cad-exploded.png"
+    ],
+    "link": null
+  },
+  {
     "title": "Checkers Online",
     "description": "Checkers Online Checkers Online is a browser-based checkers game I built independently for a web development course. The game supports both local two-player play and online multiplayer through account login. I implemented the full checkers rule set, including legal moves, captures, kinging, turn handling, and game resets. The site also includes a light/dark theme toggle, sound effects, and visual feedback for moves and captures. For online play, I connected the frontend to a backend server that handles user authentication and multiplayer matchmaking. I built the project end-to-end, including the game logic, UI design, audio, visual effects, and server integration.",
     "images": [
@@ -58,6 +66,7 @@ var PROJECTS = [
 ];
 
 var BG_IMAGES = [
+  "projects/3D Printed Drone/cad-exploded.png",
   "projects/Checkers Online/gameplay.png",
   "projects/Checkers Online/login-screen.png",
   "projects/ROS2 SLAM Autonomous Explorer/01-robot-hardware.png",
