@@ -4,6 +4,7 @@
   "description": "WPI CS 4241 first assignment",
   "author": "Charlie Roberts",
   "scripts": {
+    "build": "node generate.js",
     "start": "node server.js"
   }
 }

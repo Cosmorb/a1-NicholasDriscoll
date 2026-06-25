@@ -1,50 +1,68 @@
 const http = require('http'),
       fs   = require('fs'),
+      path = require('path'),
       port = 3000
 
-const server = http.createServer( function( request,response ) {
-    switch (request.url) {
-        case '/':
-            sendFile(response, 'index.html')
-            break
-        case '/index.html':
-            sendFile(response, 'index.html')
-            break
-        case '/Resume.pdf':
-            sendFile(response, 'Resume.pdf')
-            break
-        case '/BSB.png':
-            sendFile(response, 'BSB.png')
-            break
-        case '/US-ARMY-ROTC.svg.png':
-            sendFile(response, 'US-ARMY-ROTC.svg.png')
-            break
-        case '/wpi-logo.webp':
-            sendFile(response, 'wpi-logo.webp')
-            break
-        default:
-            response.end('404 Error: File Not Found')
+// Files served directly from the project root
+const ROOT_FILES = new Set([
+  'index.html',
+  'projects-data.js',
+  'Resume.pdf',
+  'BSB.png',
+  'US-ARMY-ROTC.svg.png',
+  'wpi-logo.webp',
+])
+
+const MIME = {
+  '.html': 'text/html',
+  '.js':   'application/javascript',
+  '.css':  'text/css',
+  '.pdf':  'application/pdf',
+  '.png':  'image/png',
+  '.jpg':  'image/jpeg',
+  '.jpeg': 'image/jpeg',
+  '.webp': 'image/webp',
+  '.gif':  'image/gif',
+  '.svg':  'image/svg+xml',
+}
+
+const server = http.createServer( function( request, response ) {
+    // Normalise URL: strip query string and decode percent-encoding
+    let urlPath = request.url.split('?')[0]
+    try { urlPath = decodeURIComponent(urlPath) } catch(e) {}
+
+    // Root → index.html
+    if (urlPath === '/') urlPath = '/index.html'
+
+    const filename = urlPath.substring(1)  // strip leading /
+    const ext      = path.extname(filename).toLowerCase()
+    const mime     = MIME[ext] || 'application/octet-stream'
+
+    // Allow root-level whitelisted files
+    if (ROOT_FILES.has(filename)) {
+        return sendFile(response, filename, mime)
     }
+
+    // Allow anything inside the projects/ folder (images, etc.)
+    const normalised = path.normalize(filename)
+    if (normalised.startsWith('projects' + path.sep) || normalised.startsWith('projects/')) {
+        return sendFile(response, normalised, mime)
+    }
+
+    response.writeHead(404, { 'Content-Type': 'text/plain' })
+    response.end('404 Error: File Not Found')
 })
-
-// This was a Chgatgpt way to do this that i tryed to see if link would atleast work, ive updated to a less intutive method but one that i came up with myself
-//
-// let filename = request.url === '/' ? 'index.html' : request.url.substring(1)
-//
-// fs.readFile(filename, (err, content) => {
-//     if (err) {
-//         response.statusCode = 404
-//         response.end('404 Error: File Not Found')
-//     } else {
-//         response.end(content)
-//     }
-// })
-
 
 server.listen( process.env.PORT || port )
 
-const sendFile = function( response, filename ) {
+const sendFile = function( response, filename, mime ) {
    fs.readFile( filename, function( err, content ) {
-     response.end( content, 'utf-8' )
+     if (err) {
+       response.writeHead(404, { 'Content-Type': 'text/plain' })
+       response.end('404 Error: File Not Found')
+     } else {
+       response.writeHead(200, { 'Content-Type': mime })
+       response.end( content )
+     }
    })
 }
