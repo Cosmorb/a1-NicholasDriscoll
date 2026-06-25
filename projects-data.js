@@ -13,6 +13,18 @@ var PROJECTS = [
     "link": null
   },
   {
+    "title": "Autonomous Desktop CNC Machine",
+    "description": "For my WPI Major Qualifying Project, I worked with a team of six engineers to continue the development of a low-cost, open-source autonomous desktop CNC machine for student manufacturing education. The machine was designed to mill wood, plastics, and non-ferrous metals across four axes. Our team improved several major systems on the machine, including the automatic tool changer, dust collection system, coolant system, rotary 4th axis, and CAM workflow. The project included a reverse-engineered three-slot automatic tool changer with a touch-off sensor for measuring tool offsets, a redesigned dust boot with a magnetic brush attachment, and a new dust skirt with print-in-place bristles for better chip evacuation. We also overhauled the coolant system by adding a chip auger, sump, bag filter, drain pan, and improved flow capacity. The 4th-axis rotary unit was installed and configured, allowing the machine to run multi-axis toolpaths. On the software and CAM side, the team developed collision simulations, fixture models, and a feeds-and-speeds library to make the machine easier and safer to use. My main Fusion 360 contributions were the custom coolant drain bed and the ECU enclosure. The drain bed was designed as a sloped center-draining tray to guide chips and coolant into the sump. I also modeled the full ECU enclosure, including the controller board, power supply, terminal blocks, and internal wiring layout, so the electronics could be mounted cleanly and safely inside the machine.",
+    "images": [
+      "projects/Autonomous Desktop CNC Machine/01-poster.png",
+      "projects/Autonomous Desktop CNC Machine/02-machine-photo.png",
+      "projects/Autonomous Desktop CNC Machine/03-cad-sensor-mount.png",
+      "projects/Autonomous Desktop CNC Machine/04-cad-coolant-drain-tray.png",
+      "projects/Autonomous Desktop CNC Machine/05-cad-ecu-enclosure.png"
+    ],
+    "link": null
+  },
+  {
     "title": "Checkers Online",
     "description": "Checkers Online Checkers Online is a browser-based checkers game I built independently for a web development course. The game supports both local two-player play and online multiplayer through account login. I implemented the full checkers rule set, including legal moves, captures, kinging, turn handling, and game resets. The site also includes a light/dark theme toggle, sound effects, and visual feedback for moves and captures. For online play, I connected the frontend to a backend server that handles user authentication and multiplayer matchmaking. I built the project end-to-end, including the game logic, UI design, audio, visual effects, and server integration.",
     "images": [
@@ -36,8 +48,6 @@ var PROJECTS = [
     "title": "Robotic Arm Color Ball Sorter",
     "description": "Vision-Guided Robotic Sorting System (RBE 3001) Built a vision-guided robotic sorting system over five robotics labs using an xArm robotic arm and an overhead camera. The system detects colored balls on a custom checkerboard workspace, identifies their color and position, then commands the robot to pick them up and place them into the correct color-coded bins. I designed the checkerboard, tile grid, ball holders, and camera mount in Fusion 360, then 3D printed the parts. The checkerboard also served as a calibration tool, allowing the camera to convert pixel locations into real-world coordinates that the robot could reach. The project progressed from basic arm control to forward kinematics, inverse kinematics, trajectory planning, singularity avoidance, and finally full camera-based pick-and-place automation. By the final stage, the system could sort red, orange, yellow, and green balls without manual input. After completing these labs I extended this work into a new project by combining it with the web-based Checkers Online game I built for a CS course. The robot arm's pick-and-place pipeline, camera calibration system, and IK solver from this project became the foundation of the xArm Checkers Integration, where the arm now physically plays checkers on a real board driven by moves from a live browser game.",
     "images": [
-      "projects/Robotic Arm Color Ball Sorter/cad-assembled.png",
-      "projects/Robotic Arm Color Ball Sorter/cad-exploded.png",
       "projects/Robotic Arm Color Ball Sorter/camera-view-balls.png",
       "projects/Robotic Arm Color Ball Sorter/dh-frames.png",
       "projects/Robotic Arm Color Ball Sorter/joint-angle-trajectories.png",
@@ -45,7 +55,6 @@ var PROJECTS = [
       "projects/Robotic Arm Color Ball Sorter/robot-arm-setup.png",
       "projects/Robotic Arm Color Ball Sorter/robot-gripper.png",
       "projects/Robotic Arm Color Ball Sorter/robot-overview.png",
-      "projects/Robotic Arm Color Ball Sorter/robot-picking.png",
       "projects/Robotic Arm Color Ball Sorter/task-space-plot.png",
       "projects/Robotic Arm Color Ball Sorter/velocity-vs-time.png"
     ],
@@ -70,6 +79,7 @@ var PROJECTS = [
     "images": [
       "projects/xArm Checkers Integration/cad-assembled.png",
       "projects/xArm Checkers Integration/cad-exploded.png",
+      "projects/xArm Checkers Integration/gameplay.png",
       "projects/xArm Checkers Integration/robot-gripper.png",
       "projects/xArm Checkers Integration/robot-overview.png",
       "projects/xArm Checkers Integration/robot-picking.png"
@@ -80,14 +90,17 @@ var PROJECTS = [
 
 var BG_IMAGES = [
   "projects/3D Printed Drone/cad-exploded.png",
+  "projects/Autonomous Desktop CNC Machine/01-poster.png",
+  "projects/Autonomous Desktop CNC Machine/02-machine-photo.png",
+  "projects/Autonomous Desktop CNC Machine/03-cad-sensor-mount.png",
+  "projects/Autonomous Desktop CNC Machine/04-cad-coolant-drain-tray.png",
+  "projects/Autonomous Desktop CNC Machine/05-cad-ecu-enclosure.png",
   "projects/Checkers Online/gameplay.png",
   "projects/Checkers Online/login-screen.png",
   "projects/ROS2 SLAM Autonomous Explorer/01-robot-hardware.png",
   "projects/ROS2 SLAM Autonomous Explorer/02-robot-exploring.png",
   "projects/ROS2 SLAM Autonomous Explorer/03-rviz-map-building.png",
   "projects/ROS2 SLAM Autonomous Explorer/04-rviz-completed-map.png",
-  "projects/Robotic Arm Color Ball Sorter/cad-assembled.png",
-  "projects/Robotic Arm Color Ball Sorter/cad-exploded.png",
   "projects/Robotic Arm Color Ball Sorter/camera-view-balls.png",
   "projects/Robotic Arm Color Ball Sorter/dh-frames.png",
   "projects/Robotic Arm Color Ball Sorter/joint-angle-trajectories.png",
@@ -95,7 +108,6 @@ var BG_IMAGES = [
   "projects/Robotic Arm Color Ball Sorter/robot-arm-setup.png",
   "projects/Robotic Arm Color Ball Sorter/robot-gripper.png",
   "projects/Robotic Arm Color Ball Sorter/robot-overview.png",
-  "projects/Robotic Arm Color Ball Sorter/robot-picking.png",
   "projects/Robotic Arm Color Ball Sorter/task-space-plot.png",
   "projects/Robotic Arm Color Ball Sorter/velocity-vs-time.png",
   "projects/TinyPets/hatched.png",
@@ -106,6 +118,7 @@ var BG_IMAGES = [
   "projects/TinyPets/store.png",
   "projects/xArm Checkers Integration/cad-assembled.png",
   "projects/xArm Checkers Integration/cad-exploded.png",
+  "projects/xArm Checkers Integration/gameplay.png",
   "projects/xArm Checkers Integration/robot-gripper.png",
   "projects/xArm Checkers Integration/robot-overview.png",
   "projects/xArm Checkers Integration/robot-picking.png"
