@@ -1,0 +1,7 @@
+Vision-Guided Robotic Sorting System
+
+Built a vision-guided robotic sorting system over five robotics labs using an xArm robotic arm and an overhead camera. The system detects colored balls on a custom checkerboard workspace, identifies their color and position, then commands the robot to pick them up and place them into the correct color-coded bins.
+
+I designed the checkerboard, tile grid, ball holders, and camera mount in Fusion 360, then 3D printed the parts. The checkerboard also served as a calibration tool, allowing the camera to convert pixel locations into real-world coordinates that the robot could reach.
+
+The project progressed from basic arm control to forward kinematics, inverse kinematics, trajectory planning, singularity avoidance, and finally full camera-based pick-and-place automation. By the final stage, the system could sort red, orange, yellow, and green balls without manual input.

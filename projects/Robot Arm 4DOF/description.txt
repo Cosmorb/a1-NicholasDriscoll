@@ -1,1 +1,0 @@
-A 4 degrees-of-freedom robotic arm designed and built entirely from scratch. Structural components were 3D printed and driven by servo motors with embedded microcontroller control. Built to explore forward kinematics, joint design, and fabrication workflows.

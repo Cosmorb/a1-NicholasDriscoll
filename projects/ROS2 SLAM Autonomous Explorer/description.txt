@@ -1,0 +1,11 @@
+Autonomous LiDAR-Based Mapping and Exploration Robot
+
+Originally developed as an RBE 3002 Team 14 robotics project, this system was first implemented on a TurtleBot platform using ROS2. I am now modifying and adapting the project for a different physical mobile robot, including integrating a new LiDAR sensor and tuning the software stack for the new hardware.
+
+The project focuses on autonomous exploration of an unknown environment. The robot starts without a complete map and uses LiDAR data to detect frontiers, which are the boundaries between explored free space and unknown areas. An A* path planner then generates a route to the closest useful frontier, while the robot follows the path and SLAM Toolbox updates the occupancy grid in real time. This process repeats until the space is mapped.
+
+The system uses ROS2 topics for LiDAR scans, odometry, mapping, path planning, and velocity control. RViz2 is used to visualize the map, inflated obstacle space, frontier targets, planned path, robot pose, and localization data.
+
+A later phase added kidnapping recovery using AMCL, where the robot can recover its position after being moved by reinitializing the particle filter and converging back on its true pose.
+
+My current work is focused on moving the system from the original TurtleBot setup to a different robot platform, adjusting the LiDAR integration, odometry handling, navigation behavior, and tuning needed for real-world sensor noise and drift.

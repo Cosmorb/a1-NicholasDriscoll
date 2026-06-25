@@ -5,24 +5,41 @@
 
 const PROJECTS = [
   {
-    "title": "Robot Arm 4DOF",
-    "description": "A 4 degrees-of-freedom robotic arm designed and built entirely from scratch. Structural components were 3D printed and driven by servo motors with embedded microcontroller control. Built to explore forward kinematics, joint design, and fabrication workflows.",
-    "images": [
-      "projects/Robot Arm 4DOF/Screenshot from 2025-08-29 23-47-23.png"
-    ],
+    "title": "3D Printed Drone",
+    "description": "An ongoing personal project to design and 3D print a fully custom drone from scratch using carbon fiber reinforced PETG (CF-PETG) filament. The frame, body shell, arm structure, and motor mounts are all original CAD designs optimized for printability and structural rigidity. CF-PETG was chosen for its high stiffness-to-weight ratio and resistance to vibration — critical for a flight platform. Currently in the design and prototyping phase.",
+    "images": [],
     "link": null
   },
   {
-    "title": "Robot Arm 6DOF",
-    "description": "An extended 6 degrees-of-freedom robotic arm building on the 4DOF design. The additional joints significantly increase workspace and dexterity, enabling more complex manipulation tasks. Features redesigned joint geometry for improved range of motion and structural rigidity.",
-    "images": [
-      "projects/Robot Arm 6DOF/Screenshot from 2025-08-29 23-48-31.png"
-    ],
+    "title": "Autonomous Desktop CNC Machine",
+    "description": "WPI Major Qualifying Project (MQP) — completed as a graduating senior capstone at Worcester Polytechnic Institute. This was a collaborative group project developed by a team of six engineers: Beckett Peale (ME), Chris Warneck (ME), Daniel Willins (ME), Alex Stepanov (ME), Matthew Papesh (RBE/CS), and Nicholas Driscoll (RBE), advised by Pradeep Radhakrishnan (MME/RBE) and Joshua Cuneo (CS). The project is a continuation of a multi-year effort to build an autonomous desktop CNC machine capable of milling wood, plastic, and non-ferrous metals across four axes. Key contributions included: a reverse-engineered three-slot automatic tool changer with a touch-off sensor for autonomous tool offset measurement; a redesigned dust boot with a magnetic brush attachment and engineered dust skirt with print-in-place bristles for chip evacuation via a 132 CFM vacuum; a full coolant system overhaul adding a chip auger, sump, bag filter, and drain pan with flow capacity increased to 13 GPM; installation and firmware imaging of a 4th-axis rotary unit with demonstrated multi-axis toolpath machining; and CAM development including kinematic collision simulations, parametric fixture modeling, and a tuned feeds-and-speeds library. The resulting system is low-cost, open-source, and designed to support student manufacturing education at WPI. Nicholas Driscoll's personal Fusion 360 contributions included the custom coolant drain bed — a center-draining sloped tray designed to direct chips and coolant to the sump — and the full ECU (Electronic Control Unit) enclosure, modeled in Fusion with all internal electrical components including the controller board, power supply, terminal blocks, and wiring layout accounted for in the design.",
+    "images": [],
+    "link": null
+  },
+  {
+    "title": "Checkers Online",
+    "description": "Checkers Online is a fully featured browser-based checkers game built solo for a web development course. The game supports both local two-player mode and online multiplayer via account login. It includes a complete implementation of standard checkers rules, a light/dark theme toggle, sound effects and visual feedback for moves and captures, and a reset control. The online mode uses a backend server to handle authentication and match players for real-time play. Built entirely independently — design, game logic, audio, visuals, and server integration.",
+    "images": [],
+    "link": "https://a4-nicholasdriscoll.onrender.com/"
+  },
+  {
+    "title": "ROS2 SLAM Autonomous Explorer",
+    "description": "Originally developed as RBE-3002 Team 14's academic project, this work is now being ported from Gazebo simulation onto a real physical mobile robot platform (purchased off-market) with a LiDAR being added — currently in progress. The system implements autonomous frontier-based exploration of an unknown environment using ROS2. The robot spawns with no prior map; LiDAR scans detect frontiers (boundaries between known-free and unknown space), an A* planner computes an optimal route to the nearest frontier, and a controller drives the robot along the path while SLAM Toolbox builds and corrects the occupancy grid in real time. The loop repeats until the environment is fully mapped. Phase 2 adds kidnapping recovery: AMCL particle filter localization is reinitialized by scattering hypotheses across the entire map and waiting for convergence on the robot's true pose via /reinitialize_global_localization. The full pipeline: Gazebo (or physical hardware) publishes /scan and /odom → SLAM builds /map → frontier calculator identifies unexplored boundaries → A* path planner generates /nav_path → controller outputs /cmd_vel. RViz2 visualizes the occupancy grid, C-space inflation layer, frontier targets, planned path, AMCL particle cloud, and robot pose estimate simultaneously. The ongoing effort replaces the simulated TurtleBot3 with the real hardware platform, integrating the physical LiDAR and tuning the stack for real-world sensor noise and odometry drift.",
+    "images": [],
+    "link": null
+  },
+  {
+    "title": "TinyPets",
+    "description": "TinyPets is a retro pixel-art web game built as a group project. Players create an account, earn credits, visit the in-game shop to buy randomized eggs, hatch them through an interactive click-based hatching sequence, and collect the pets that emerge. The game features a persistent pet collection system where each pet has a unique ID and sell value, allowing players to trade pets for credits and keep playing. Nicholas Driscoll primarily contributed to the backend of the website, handling server-side logic, database interactions, and API endpoints that power the shop, egg purchasing, hatching mechanics, and pet management system.",
+    "images": [],
+    "link": null
+  },
+  {
+    "title": "xArm Color Ball Sorter",
+    "description": "A vision-guided robotic manipulation system built across 5 progressive labs as part of a robotics course. A camera mounted above a custom-designed checkerboard looks down and identifies colored balls (red, orange, yellow, green) by position and color. The system then commands an xArm robotic arm to autonomously pick up each ball and drop it into the correct color-coded bin — fully automated sorting with no human intervention. The custom checkerboard, tile grid, ball holders, and camera mount were all designed from scratch in Fusion 360 and 3D printed. The board doubles as a calibration reference so the camera can map pixel coordinates directly to physical 3D coordinates the arm can reach. Built in 5 stages: (1) basic arm familiarization and control, (2) forward kinematics to model the arm's position in 3D space, (3) inverse kinematics to solve joint angles for a target position, (4) trajectory smoothing and singularity avoidance, and (5) full camera integration with real-time color detection and closed-loop pick-and-place execution.",
+    "images": [],
     "link": null
   }
 ];
 
-const BG_IMAGES = [
-  "projects/Robot Arm 4DOF/Screenshot from 2025-08-29 23-47-23.png",
-  "projects/Robot Arm 6DOF/Screenshot from 2025-08-29 23-48-31.png"
-];
+const BG_IMAGES = [];
