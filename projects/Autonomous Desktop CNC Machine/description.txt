@@ -1,5 +1,3 @@
-**Autonomous Desktop CNC Machine — WPI Major Qualifying Project**
-
 For my WPI Major Qualifying Project, I worked with a team of six engineers to continue the development of a low-cost, open-source autonomous desktop CNC machine for student manufacturing education. The machine was designed to mill wood, plastics, and non-ferrous metals across four axes.
 
 Our team improved several major systems on the machine, including the automatic tool changer, dust collection system, coolant system, rotary 4th axis, and CAM workflow. The project included a reverse-engineered three-slot automatic tool changer with a touch-off sensor for measuring tool offsets, a redesigned dust boot with a magnetic brush attachment, and a new dust skirt with print-in-place bristles for better chip evacuation.
