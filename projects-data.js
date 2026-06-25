@@ -13,7 +13,13 @@ const PROJECTS = [
   {
     "title": "Autonomous Desktop CNC Machine",
     "description": "**Autonomous Desktop CNC Machine — WPI Major Qualifying Project** For my WPI Major Qualifying Project, I worked with a team of six engineers to continue the development of a low-cost, open-source autonomous desktop CNC machine for student manufacturing education. The machine was designed to mill wood, plastics, and non-ferrous metals across four axes. Our team improved several major systems on the machine, including the automatic tool changer, dust collection system, coolant system, rotary 4th axis, and CAM workflow. The project included a reverse-engineered three-slot automatic tool changer with a touch-off sensor for measuring tool offsets, a redesigned dust boot with a magnetic brush attachment, and a new dust skirt with print-in-place bristles for better chip evacuation. We also overhauled the coolant system by adding a chip auger, sump, bag filter, drain pan, and improved flow capacity. The 4th-axis rotary unit was installed and configured, allowing the machine to run multi-axis toolpaths. On the software and CAM side, the team developed collision simulations, fixture models, and a feeds-and-speeds library to make the machine easier and safer to use. My main Fusion 360 contributions were the custom coolant drain bed and the ECU enclosure. The drain bed was designed as a sloped center-draining tray to guide chips and coolant into the sump. I also modeled the full ECU enclosure, including the controller board, power supply, terminal blocks, and internal wiring layout, so the electronics could be mounted cleanly and safely inside the machine.",
-    "images": [],
+    "images": [
+      "projects/Autonomous Desktop CNC Machine/01-poster.png",
+      "projects/Autonomous Desktop CNC Machine/02-machine-photo.png",
+      "projects/Autonomous Desktop CNC Machine/03-cad-tool-changer.png",
+      "projects/Autonomous Desktop CNC Machine/04-cad-coolant-drain-tray.png",
+      "projects/Autonomous Desktop CNC Machine/05-cad-ecu-enclosure.png"
+    ],
     "link": null
   },
   {
@@ -59,6 +65,11 @@ const PROJECTS = [
 ];
 
 const BG_IMAGES = [
+  "projects/Autonomous Desktop CNC Machine/01-poster.png",
+  "projects/Autonomous Desktop CNC Machine/02-machine-photo.png",
+  "projects/Autonomous Desktop CNC Machine/03-cad-tool-changer.png",
+  "projects/Autonomous Desktop CNC Machine/04-cad-coolant-drain-tray.png",
+  "projects/Autonomous Desktop CNC Machine/05-cad-ecu-enclosure.png",
   "projects/Checkers Online/gameplay.png",
   "projects/Checkers Online/login-screen.png",
   "projects/TinyPets/hatched.png",
