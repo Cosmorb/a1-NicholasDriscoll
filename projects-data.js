@@ -3,7 +3,7 @@
 //   node generate.js
 // (Render runs this automatically on every deploy as the Build Command.)
 
-const PROJECTS = [
+var PROJECTS = [
   {
     "title": "3D Printed Drone",
     "description": "**Custom 3D-Printed Drone** An ongoing personal project focused on designing and 3D printing a fully custom drone from scratch. The frame, body shell, arms, and motor mounts are all original CAD designs made with printability, strength, and weight reduction in mind. The drone is being printed with carbon fiber reinforced PETG because of its stiffness, durability, and vibration resistance, which are important for a stable flight platform. The project is currently in the design and prototyping phase, with work focused on refining the frame geometry, improving motor mount strength, and preparing the design for flight testing.",
@@ -71,7 +71,7 @@ const PROJECTS = [
   }
 ];
 
-const BG_IMAGES = [
+var BG_IMAGES = [
   "projects/3D Printed Drone/cad-exploded.png",
   "projects/Autonomous Desktop CNC Machine/01-poster.png",
   "projects/Autonomous Desktop CNC Machine/02-machine-photo.png",
