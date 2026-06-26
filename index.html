@@ -30,7 +30,7 @@
       overflow-x: hidden;
     }
 
-    /* ── NAVIGATION ─────────────────────────────────── */
+    /* nav*/
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -84,7 +84,7 @@
       color: var(--text) !important;
     }
 
-    /* ── HERO ────────────────────────────────────────── */
+    /*hero*/
     #hero {
       position: relative;
       height: 100vh;
@@ -235,7 +235,7 @@
       50%      { transform: translateX(-50%) translateY(7px); }
     }
 
-    /* ── SHARED SECTION STYLES ───────────────────────── */
+    /*styles*/
     .section-wrap {
       padding: 6rem 2rem;
       max-width: 1100px;
@@ -259,7 +259,7 @@
       margin-bottom: 3rem;
     }
 
-    /* ── ABOUT ───────────────────────────────────────── */
+    /*about */
     .about-statement {
       font-family: 'Rajdhani', sans-serif;
       font-size: clamp(2.2rem, 5vw, 4rem);
@@ -328,7 +328,7 @@
 
     .logos-row img:hover { filter: grayscale(0) opacity(1); }
 
-    /* ── INFO BLOCKS (About right col) ──────────────── */
+    /*info*/
     .info-block { margin-bottom: 2.8rem; }
 
     .info-block-label {
@@ -385,7 +385,7 @@
       margin-top: 0.3rem;
     }
 
-    /* ── TIMELINE (About right col) ─────────────────── */
+    /* timeline heading*/
     .tl-heading {
       font-size: 0.65rem;
       font-weight: 700;
@@ -449,7 +449,7 @@
       line-height: 1.65;
     }
 
-    /* ── PROJECTS ────────────────────────────────────── */
+    /* projetcs */
     #projects-section, [style*="background:var(--bg2)"] {
       background: var(--bg2);
     }
@@ -514,7 +514,7 @@
 
 
 
-    /* ── MODAL ───────────────────────────────────────── */
+    /* m-overlay */
     .modal-overlay {
       position: fixed;
       inset: 0;
@@ -628,7 +628,7 @@
 
     .modal-close:hover { background: var(--border); }
 
-    /* ── CONTACT ─────────────────────────────────────── */
+    /*  contact  */
     .contact-intro {
       color: var(--muted);
       font-size: 0.97rem;
@@ -674,7 +674,7 @@
 
     .contact-val { font-size: 0.88rem; font-weight: 500; }
 
-    /* ── FOOTER ──────────────────────────────────────── */
+    /* footer */
     footer {
       text-align: center;
       padding: 2rem;
@@ -683,12 +683,12 @@
       font-size: 0.82rem;
     }
 
-    /* ── SCROLLBAR ───────────────────────────────────── */
+    /*  scrollbar  */
     ::-webkit-scrollbar { width: 5px; }
     ::-webkit-scrollbar-track { background: var(--bg); }
     ::-webkit-scrollbar-thumb { background: #c8c8c6; border-radius: 3px; }
 
-    /* ── RESPONSIVE ──────────────────────────────────── */
+    /*  response  */
     @media (max-width: 768px) {
       .about-grid { grid-template-columns: 1fr; gap: 3rem; }
       .about-statement { font-size: clamp(2rem, 8vw, 2.8rem); margin-bottom: 2.5rem; }
@@ -703,7 +703,7 @@
 </head>
 <body>
 
-<!-- ══ NAVIGATION ══════════════════════════════════════════ -->
+<!-- nav -->
 <nav>
   <a class="nav-brand" href="#hero">N. DRISCOLL</a>
   <ul class="nav-links">
@@ -714,7 +714,7 @@
   </ul>
 </nav>
 
-<!-- ══ HERO ════════════════════════════════════════════════ -->
+<!-- hero  -->
 <div id="hero">
   <div class="hero-bg" id="heroBg"></div>
   <div class="hero-overlay"></div>
@@ -740,14 +740,14 @@
   </div>
 </div>
 
-<!-- ══ ABOUT ════════════════════════════════════════════════ -->
+<!--  abouit me sections  -->
 <div id="about">
   <div class="section-wrap">
     <div class="section-label">About Me</div>
 
     <div class="about-grid">
 
-      <!-- Left col — bio -->
+      <!-- bio -->
       <div>
         <p class="about-bio">
           I graduated from <strong>Worcester Polytechnic Institute</strong> with a B.S. in
@@ -783,7 +783,7 @@
         </div>
       </div>
 
-      <!-- Right col — timeline -->
+      <!-- exspience -->
       <div>
         <div class="tl-heading">Education</div>
         <div class="timeline">
@@ -867,7 +867,7 @@
   </div>
 </div>
 
-<!-- ══ PROJECTS ═════════════════════════════════════════════ -->
+<!-- projetcs -->
 <div id="projects" id="projects-section" style="background:var(--bg2);">
   <div class="section-wrap">
     <div class="section-label">Portfolio</div>
@@ -876,14 +876,14 @@
   </div>
 </div>
 
-<!-- ══ CONTACT ══════════════════════════════════════════════ -->
+<!-- contact info -->
 <div id="contact">
   <div class="section-wrap">
     <div class="section-label">Contact</div>
     <div class="section-title">Get In Touch</div>
     <p class="contact-intro">
-      Open to internship opportunities, research collaborations, and conversations
-      about robotics, manufacturing automation, or anything in between.
+      Open to career opportunities that align with my experience, research collaborations, and conversations
+      about robotics, and manufacturing automation.
     </p>
     <div class="contact-grid">
       <a href="mailto:nickdrisc@gmail.com" class="contact-card">
